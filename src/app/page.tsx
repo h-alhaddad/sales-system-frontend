@@ -79,8 +79,8 @@ const LoginPage = () => {
     loginMutation.mutate({ email, password });
   };
 
-  const handleAdminLogin = () => {
-    setEmail("admin@example.com");
+  const fillDemo = (email: string) => {
+    setEmail(email);
     setPassword("123456");
   };
 
@@ -143,14 +143,32 @@ const LoginPage = () => {
               >
                 {loginMutation.isLoading ? "Signing in..." : "Sign in"}
               </Button>
-              <Button
-                onClick={handleAdminLogin}
-                variant="outline"
-                className="w-full"
-                type="button"
-              >
-                Use Admin Credentials
-              </Button>
+              <div className="grid grid-cols-3 gap-2">
+                <Button
+                  onClick={() => fillDemo("admin@example.com")}
+                  variant="outline"
+                  type="button"
+                  size="sm"
+                >
+                  Admin
+                </Button>
+                <Button
+                  onClick={() => fillDemo("ahmed.s@demo.com")}
+                  variant="outline"
+                  type="button"
+                  size="sm"
+                >
+                  Coach
+                </Button>
+                <Button
+                  onClick={() => fillDemo("fatima.b@demo.com")}
+                  variant="outline"
+                  type="button"
+                  size="sm"
+                >
+                  Agent
+                </Button>
+              </div>
             </CardFooter>
           </form>
         </CardContent>
