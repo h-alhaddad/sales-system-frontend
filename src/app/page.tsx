@@ -143,31 +143,34 @@ const LoginPage = () => {
               >
                 {loginMutation.isLoading ? "Signing in..." : "Sign in"}
               </Button>
-              <div className="grid grid-cols-3 gap-2">
-                <Button
-                  onClick={() => fillDemo("admin@example.com")}
-                  variant="outline"
-                  type="button"
-                  size="sm"
-                >
-                  Admin
-                </Button>
-                <Button
-                  onClick={() => fillDemo("ahmed.s@demo.com")}
-                  variant="outline"
-                  type="button"
-                  size="sm"
-                >
-                  Coach
-                </Button>
-                <Button
-                  onClick={() => fillDemo("fatima.b@demo.com")}
-                  variant="outline"
-                  type="button"
-                  size="sm"
-                >
-                  Agent
-                </Button>
+              <div className="w-full space-y-1.5">
+                <p className="text-xs text-muted-foreground text-center">Try a demo account</p>
+                <div className="grid grid-cols-3 gap-2 w-full">
+                  <Button
+                    onClick={() => fillDemo("admin@example.com")}
+                    variant="outline"
+                    type="button"
+                    className="w-full"
+                  >
+                    Admin
+                  </Button>
+                  <Button
+                    onClick={() => fillDemo("ahmed.s@demo.com")}
+                    variant="outline"
+                    type="button"
+                    className="w-full"
+                  >
+                    Coach
+                  </Button>
+                  <Button
+                    onClick={() => fillDemo("fatima.b@demo.com")}
+                    variant="outline"
+                    type="button"
+                    className="w-full"
+                  >
+                    Agent
+                  </Button>
+                </div>
               </div>
             </CardFooter>
           </form>
